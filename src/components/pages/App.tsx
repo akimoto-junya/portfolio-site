@@ -8,7 +8,7 @@ const App: React.FC = (): ReactElement => {
   return (
     <div className="App">
       <Cover />
-      <PageLink to={Path.page}>Page</PageLink>
+      <PageLink to={Path.about.value}>Page</PageLink>
     </div>
   );
 };

@@ -7,9 +7,9 @@ import Path from './Path';
 const routes = (
   <Layout>
     <Switch>
-      <Route exact path={Path.app} component={App} />
-      <Route exact path={Path.page} component={Page} />
-      <Redirect to={Path.app} />
+      <Route exact path={Path.app.value} component={App} />
+      <Route exact path={Path.about.value} component={Page} />
+      <Redirect to={Path.app.value} />
     </Switch>
   </Layout>
 );
