@@ -5,10 +5,14 @@ import Path from '@/routes/Path';
 import Cover from '@/components/common/Cover';
 
 const App: React.FC = (): ReactElement => {
+  const items: number[] = Array.from({ length: 100 }, (v, k) => k);
   return (
     <div className="App">
       <Cover />
       <PageLink to={Path.about.value}>Page</PageLink>
+      {items.map((item: number) => {
+        return <br key={item} />;
+      })}
     </div>
   );
 };

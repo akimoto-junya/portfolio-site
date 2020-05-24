@@ -39,13 +39,17 @@ const Menu: React.FC<MenuProps> = props => {
       <MenuBody>
         <HiddenCover onClick={closeMenu} className={getvisibility()} />
         <MenuBar className={getvisibility()}>
-          {items.map((item: PathInfo) => {
-            return (
-              <Navigation key={item.value} to={item.value}>
-                <NavigationText>{item.name}</NavigationText>
-              </Navigation>
-            );
-          })}
+          <ul>
+            {items.map((item: PathInfo) => {
+              return (
+                <li key={item.value}>
+                  <Navigation to={item.value} onClick={closeMenu}>
+                    <NavigationText>{item.name}</NavigationText>
+                  </Navigation>
+                </li>
+              );
+            })}
+          </ul>
         </MenuBar>
       </MenuBody>
     </>
