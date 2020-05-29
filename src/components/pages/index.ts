@@ -1,4 +1,7 @@
 import App from './App';
-import Page from './Page';
+import About from './About';
+import Works from './Works';
+import Skills from './Skills';
+import Links from './Links';
 
-export { App, Page };
+export { App, About, Works, Skills, Links };
