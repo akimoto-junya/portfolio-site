@@ -2,8 +2,8 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Path from '@/routes/Path';
-import Cover from '@/components/common/Cover';
-import About from './About';
+import Cover from './Cover';
+import About from '../About';
 
 const App: React.FC = (): ReactElement => {
   const items: number[] = Array.from({ length: 100 }, (v, k) => k);

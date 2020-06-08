@@ -2,6 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import icon from '@/assets/images/logo_large.png';
 import packageImg from '@/assets/images/package.svg';
+import scrollImg from '@/assets/images/scroll_arrow.svg';
+
+const ScrollToAbout = () => {
+  const element = document.getElementsByClassName('about')[0];
+  const rect = element.getBoundingClientRect();
+  const top = rect.top + window.pageYOffset - 70;
+  window.scrollTo({ top, left: 0, behavior: 'smooth' });
+};
 
 const Cover: React.FC = () => {
   return (
@@ -14,6 +22,7 @@ const Cover: React.FC = () => {
         </ArrowBody>
         <ArrowHead />
       </WhiteArrow>
+      <ScrollArrow src={scrollImg} onClick={ScrollToAbout} />
     </Wrapper>
   );
 };
@@ -67,6 +76,19 @@ const Title = styled.div`
   width: 30%;
   padding: 3vh 5vw;
   font-size: 5vw;
+  animation: visiblize-title 2s ease 0s 1 normal forwards;
+
+  @keyframes visiblize-title {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const ArrowHead = styled.div`
@@ -85,6 +107,28 @@ const Icon = styled.img`
   height: 70%;
   width: auto;
   padding: 0 10vw 0 10vw;
+  animation: visiblize-title 2s ease 0s 1 normal forwards;
+`;
+
+const ScrollArrow = styled.img`
+  display: block;
+  height: 10vh;
+  width: auto;
+  margin: 10vh auto auto auto;
+  cursor: pointer;
+  animation-name: visiblize-title, bounce-scroll-arrow;
+  animation-duration: 2s, 1s;
+  animation-iteration-count: 1, infinite;
+  animation-direction: normal, alternate;
+
+  @keyframes bounce-scroll-arrow {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(1vh);
+    }
+  }
 `;
 
 const Package = styled.img`
