@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: `${__dirname}/dist`,
-    filename: 'main.js'
+    filename: 'main.js',
+    publicPath: '/portfolio-site/'
   },
   module: {
     rules: [
