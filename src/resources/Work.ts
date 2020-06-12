@@ -1,16 +1,5 @@
-type Skill =
-  | 'C#'
-  | 'Xamarin'
-  | 'Python 3'
-  | 'Flask'
-  | 'VPS'
-  | 'Linux'
-  | 'Nginx'
-  | 'MariaDB'
-  | 'Rust'
-  | 'React'
-  | 'TypeScript'
-  | '';
+import Skill from './Skill';
+
 interface WorkData {
   title: string;
   detail: string;

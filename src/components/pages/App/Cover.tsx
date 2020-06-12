@@ -4,7 +4,7 @@ import icon from '@/assets/images/logo_large.png';
 import packageImg from '@/assets/images/package.svg';
 import scrollImg from '@/assets/images/scroll_arrow.svg';
 
-const ScrollToAbout = () => {
+const ScrollToAbout = (): void => {
   const element = document.getElementsByClassName('about')[0];
   const rect = element.getBoundingClientRect();
   const top = rect.top + window.pageYOffset - 70;
